@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#140e00, rgb(24, 11, 0));
+  color: #fffbeb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.9rem;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f59e0b;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff6a00;
+  border-radius: 3rem;
+}
+
+/***********************************************/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.header-title {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+}
+
+.header button {
+  font-size: 2.4rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 0;
+  color: #f59e0b;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+/***********************************************/
+.meals {
+  max-width: 120rem;
+  list-style: none;
+  margin: 4rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+}
+
+.meal-item {
+  background-color: #111827;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: 0.3s all;
+  box-shadow: 0 1px 6px rgb(52, 39, 0);
+}
+
+.meal-item:hover {
+  box-shadow: 0rem 0.5rem 1rem #672700;
+}
+
+.meal-item article {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.meal-img {
+  width: 30rem;
+  height: 31rem;
+  object-fit: cover;
+}
+
+.meal-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.name {
+  background-color: #0f0f0f;
+  color: #ff6a00;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.meal-item-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 1rem 2rem;
+}
+
+.meal-item-price {
+  display: inline-block;
+  background-color: #000000;
+  color: #afffaf;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  width: 10rem;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.button-add-cart {
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 600;
+}
+
+.fechar {
+  color: #6d0b0b;
+  background-color: #000000;
+}
+
+.center {
+  text-align: center;
+}
+
+/***********************************************/
+.cart-title {
+  font-size: 2.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.cart > * {
+  font-size: 2rem;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+.modal-actions .text-button {
+  color: #832900;
+}
+
+.modal-actions .text-button:hover,
+.modal-actions .text-button:active {
+  color: #312c1d;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0;
+  font-weight: bold;
+  padding: 1rem;
+  color: #003b00;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-item-actions button {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #312c1d;
+  color: #ffc404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-actions button:hover,
+.cart-item-actions button:active {
+  background-color: #1d1a16;
+  color: #ffab04;
+}
+
+.modal-form {
+  font-size: 1.8rem;
+  border: 1px solid orangered;
+}
+
+.form-total-price {
+  color: #003b00;
+  margin: 1rem 0;
+}
+
+.form-actions {
+  margin-top: 2rem;
+}
+
+.control {
+  margin: 0.7rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  width: 100%;
+  max-width: 30rem;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.control-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.success {
+  font-size: 2rem;
+}
+
+.success p {
+  margin: 1rem 0;
+}
+.success button {
+  margin-top: 1.5rem;
+}
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+
+.button:hover,
+.button:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  color: #1f1a09;
+  transform: translateY(-3px);
+}
+
+.text-button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #ffc404;
+}
+
+.text-button:hover,
+.text-button:active {
+  color: #ffab04;
+}
+
+.modal {
+  margin: auto;
+  /* background-color: #e4ddd4; */
+  background-color: #fff2e6;
+
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  width: 80%;
+  max-width: 60rem;
+  animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/*******************************************/
+.error {
+  font-size: 1.8rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9b8b8;
+  color: #6d0b0b;
+  border-radius: 6px;
+}
+
+.error h2 {
+  margin: 1rem;
+}
+
+.error p {
+  margin: 1rem;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 56.25%;
+  }
+}
